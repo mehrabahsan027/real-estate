@@ -6,21 +6,24 @@ const testimonialsData = [
     quote: "Finding our dream home was effortless with RealEstatePro. Their agents were incredibly supportive and knowledgeable!",
     author: "Sarah J.",
     location: "Dhaka, Bangladesh",
-    avatar: "https://source.unsplash.com/random/100x100/?person,happy,woman" // Placeholder image
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    // Portrait of a happy woman
   },
   {
     id: 2,
     quote: "The process of selling my property was so smooth. RealEstatePro handled everything efficiently and professionally.",
     author: "David L.",
     location: "Chattogram, Bangladesh",
-    avatar: "https://source.unsplash.com/random/100x100/?person,happy,man" // Placeholder image
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    // Portrait of a happy man
   },
   {
     id: 3,
     quote: "I highly recommend RealEstatePro! Their diverse listings and transparent communication made my apartment search a breeze.",
     author: "Priya K.",
     location: "Sylhet, Bangladesh",
-    avatar: "https://source.unsplash.com/random/100x100/?person,happy,girl" // Placeholder image
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80',
+    // Portrait of a happy young woman
   },
 ];
 
