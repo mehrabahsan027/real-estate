@@ -14,7 +14,7 @@ const AboutUs = () => {
           {/* Image Section */}
           <div className="lg:w-1/2">
             <img
-              src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400&q=80"
+              src="https://images.unsplash.com/photo-1709715357519-2a84f9765e57?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="RealEstatePro Team"
               className="rounded-lg shadow-xl w-full h-auto object-cover"
             />
@@ -25,13 +25,13 @@ const AboutUs = () => {
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">
               Your Trusted Real Estate Partner
             </h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 leading-relaxed mb-4 ">
               At RealEstatePro, we make finding your perfect home simple and stress-free. Our mission is to deliver exceptional service, expert guidance, and a seamless experience for buyers, sellers, and renters.
             </p>
             <p className="text-gray-700 leading-relaxed mb-6">
               With deep market knowledge and innovative technology, our dedicated team ensures you achieve your real estate goals with confidence.
             </p>
-            <ul className="text-gray-700 list-disc list-inside space-y-2 mb-6 text-left mx-auto lg:mx-0 max-w-md">
+            <ul className="text-gray-700 list-disc list-inside space-y-2 mb-6 text-center lg:text-left mx-auto lg:mx-0 max-w-md">
               <li>Client-Focused: Your priorities come first.</li>
               <li>Market Expertise: Insight into local trends.</li>
               <li>Transparency: Clear, honest communication.</li>

@@ -15,9 +15,9 @@ const Hero = () => {
             <a href="#properties">Browse Properties</a>
             
           </button>
-          <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
+          {/* <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">
             List Your Property
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

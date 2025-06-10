@@ -9,8 +9,9 @@ const Header = () => {
         <div className="text-2xl font-bold
         
         bg-gradient-to-r from-indigo-700 to-cyan-700 text-transparent bg-clip-text
-        ">
-          RealEstatePro
+        "> 
+        <a href="#"> RealEstatePro</a>
+         
         </div>
         <div className="md:hidden">
           <button
@@ -47,15 +48,18 @@ const Header = () => {
               About Us
             </a>
           </li>
-          <li className="py-2 md:p-0 my-auto" onClick={() => setIsOpen(false)}>
+          {/* <li className="py-2 md:p-0 my-auto" onClick={() => setIsOpen(false)}>
             <a href="#contact" className="text-gray-600 hover:text-indigo-600 block">
               Contact
             </a>
-          </li>
+          </li> */}
           <li className="py-2 md:p-0">
-            <button className="bg-gradient-to-r from-indigo-600 to-cyan-700
+            <button onClick={() => setIsOpen(false)} className="bg-gradient-to-r from-indigo-600 to-cyan-700
              text-white px-4 py-2 rounded-md  w-full md:w-auto cursor-pointer">
-              List Your Property
+                <a href="#contact" className=" hover:text-yellow-50 block">
+              Contact
+            </a>
+             
             </button>
           </li>
         </ul>
