@@ -12,11 +12,11 @@ const CallToAction = () => {
         </p>
         <div className="flex justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
           <button className="bg-white text-indigo-700 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 shadow-md transition duration-300">
-            Explore Listings
+            <a href="#properties">Explore Listings</a> 
           </button>
-          <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-700 shadow-md transition duration-300">
+          {/* <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-700 shadow-md transition duration-300">
             Get a Free Valuation
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const Hero = () => {
           Explore thousands of properties for sale or rent, from cozy apartments to luxurious estates.
         </p>
         <div className="flex justify-center flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 animate-intro animate-intro-delay-2">
-          <button   className="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition duration-300">
+          <button   className="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gradient-to-r from-indigo-600 to-cyan-700 hover:text-yellow-50 shadow-sm hover:shadow-amber-50 transition-all duration-300">
             <a href="#properties">Browse Properties</a>
             
           </button>

@@ -33,7 +33,7 @@ const FeaturedProperties = () => {
           <div className="text-center mt-12">
             <button
               onClick={handleViewAllProperties}
-              className="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-700 transition duration-300"
+              className="bg-gradient-to-r from-indigo-600 to-cyan-700 text-white px-8 py-3 rounded-full text-lg font-semibold cursor-pointer transition duration-300"
             >
               View All Properties
             </button>

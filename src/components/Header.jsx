@@ -29,7 +29,7 @@ const Header = () => {
           </button>
         </div>
         <ul
-          className={`md:flex md:space-x-6 ${isOpen ? 'block animate-mobile-menu' : 'hidden'} absolute md:static top-full left-0 w-full bg-white md:bg-transparent md:w-auto p-4 md:p-0 shadow-md md:shadow-none font-medium text-center md:text-left`}
+          className={`md:flex md:space-x-6 ${isOpen ? 'block animate-mobile-menu' : 'hidden'} absolute md:static top-full left-0 w-full bg-white md:bg-transparent md:w-auto p-4 md:p-0 shadow-md md:shadow-none font-medium text-center md:text-left text-base md:text-lg`}
         >
             <li className="py-2 md:p-0 my-auto " onClick={() => setIsOpen(false)}>
             <a href="#" className="text-gray-600 hover:text-indigo-600 block">

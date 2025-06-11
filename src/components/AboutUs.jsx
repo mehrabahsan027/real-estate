@@ -21,7 +21,7 @@ const AboutUs = () => {
           </div>
 
           {/* Content Section */}
-          <div className="lg:w-1/2 text-center lg:text-left">
+          <div className="lg:w-1/2 text-center lg:text-left md:text-lg">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">
               Your Trusted Real Estate Partner
             </h3>
@@ -31,7 +31,7 @@ const AboutUs = () => {
             <p className="text-gray-700 leading-relaxed mb-6">
               With deep market knowledge and innovative technology, our dedicated team ensures you achieve your real estate goals with confidence.
             </p>
-            <ul className="text-gray-700 list-disc list-inside space-y-2 mb-6 text-center lg:text-left mx-auto lg:mx-0 max-w-md">
+            <ul className="text-gray-800 list-disc list-inside space-y-2 mb-6 text-center lg:text-left mx-auto lg:mx-0 max-w-md font-medium">
               <li>Client-Focused: Your priorities come first.</li>
               <li>Market Expertise: Insight into local trends.</li>
               <li>Transparency: Clear, honest communication.</li>
