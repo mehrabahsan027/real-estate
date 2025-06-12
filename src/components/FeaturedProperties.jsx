@@ -1,46 +1,108 @@
-import React, { useState } from 'react'; // Import useState
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import PropertyCard from './PropertyCard';
 import { properties } from '../data/properties';
 
 const FeaturedProperties = () => {
-  // State to control how many properties are shown
-  // Initially, show only the first 6 properties
   const initialPropertyCount = 6;
   const [visibleProperties, setVisibleProperties] = useState(
     properties.slice(0, initialPropertyCount)
   );
-  // State to track if all properties are currently displayed
   const [showAll, setShowAll] = useState(false);
 
   const handleViewAllProperties = () => {
-    setVisibleProperties(properties); // Show all properties
-    setShowAll(true); // Update state to indicate all are shown
+    setVisibleProperties(properties);
+    setShowAll(true);
+  };
+
+  // Variants for the section
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: 'easeOut',
+        when: 'beforeChildren',
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  // Variants for the title
+  const titleVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  // Variants for property cards
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  };
+
+  // Variants for the button
+  const buttonVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
   };
 
   return (
-    <section id="properties" className="py-16 bg-gradient-to-t from-cyan-100 to-gray-100">
+    <motion.section
+      id="properties"
+      variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      className="py-16 bg-gradient-to-t from-cyan-100 to-gray-100"
+    >
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+        <motion.h2
+          variants={titleVariants}
+          className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12"
+        >
           Featured Properties
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {visibleProperties.map(property => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
+          <AnimatePresence>
+            {visibleProperties.map((property) => (
+              <motion.div
+                key={property.id}
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, y: 30, transition: { duration: 0.3 } }}
+                layout
+              >
+                <PropertyCard property={property} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
-        {/* Show button only if not all properties are already visible */}
-        {!showAll && (
-          <div className="text-center mt-12">
-            <button
-              onClick={handleViewAllProperties}
-              className="bg-gradient-to-r from-indigo-600 to-cyan-700 text-white px-8 py-3 rounded-full text-lg font-semibold cursor-pointer transition duration-300"
+        <AnimatePresence>
+          {!showAll && (
+            <motion.div
+              variants={buttonVariants}
+              initial="hidden"
+              animate="visible"
+              exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.3 } }}
+              className="text-center mt-12"
             >
-              View All Properties
-            </button>
-          </div>
-        )}
+              <motion.button
+                onClick={handleViewAllProperties}
+                className="bg-gradient-to-r from-indigo-600 to-cyan-700 text-white px-8 py-3 rounded-full text-lg font-semibold cursor-pointer"
+                whileHover={{ scale: 1.05, boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)' }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                View All Properties
+              </motion.button>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
